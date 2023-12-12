@@ -103,3 +103,16 @@ footer {
     max-width: 600px;
     height: auto;
 }
+
+.project-info {
+    
+    padding-left: 40px; 
+}
+
+.gameplay-video {
+    width: 100%;
+    max-width: 800px;
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
