@@ -1,2 +1,0 @@
-# NiemiElias.github.io
-Portfolio

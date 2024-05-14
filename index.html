@@ -8,46 +8,57 @@
 </head>
 <body>
     <header>
-        <h1>Elias Niemi</h1>
+        <img src="profile.jpg" alt="Profile Picture" class="profile-img">
         <nav>
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <button class="nav-button" onclick="showSection('projects')">Projects</button>
+            <button class="nav-button" onclick="showSection('about')">About Me</button>
+            <button class="nav-button" onclick="showSection('skills')">Skills</button>
         </nav>
     </header>
+    
+    <section id="projects" style="display: none;">
+        <h1>Projects</h1>
 
-    <section id="about">
-            
-        <h2>About Me</h2>
-        <p>Hello! I am 20-year-old game developer currently 
-            pursuing my bachelor's degree in Information and Communications Technologies 
-            at Metropolia University of Applied Sciences. My journey in this field began with 
-            obtaining a vocational qualification in Information and Communications from Business College Helsinki, which solidified my foundation and fueled my interest in game development.</p>
+        <div class="game-display">
+            <img src="images/the-lost-vessel-screenshot.jpg" alt="Screenshot of The Lost Vessel" class="game-screenshot">
+            <button onclick="loadGame()">Play The Lost Vessel</button>
+            <div class="game-container" id="gameContainer" style="display:none;"></div>
+        </div>
+
+        <div class="game-display">
+            <img src="images/plong-screenshot.jpg" alt="Screenshot of Plong" class="game-screenshot">
+            <button onclick="loadPlong()">Play Plong</button>
+            <div class="game-container" id="gameContainerPlong" style="display:none;"></div>
+        </div>
+
+        <!-- Add your game loading scripts here, similar to previous setup -->
     </section>
 
-    <div class="project">
-        <img src="images/Plong.png" alt="Plong Game Image" class="plong-image">
-        <div class="project-info">
-            <h3>Plong</h3>
-            <p>Arkanoid style game. Made for Portfolio project</p>
-            <a href="plong.html" class="project-link">Plong</a>
-        </div>
-    </div>
+    <section id="about" style="display: none;">
+        <h1>About Me</h1>
+        <h2>I am a game developer who enjoys creating exciting experiences and journeys.</h2>
+        <p>I have worked on multiple game projects, from school projects to professional game studio projects.</p>
+    </section>
 
-    
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:elias.a.niemi@gmail.com">elias.a.niemi@gmail.com</a></p>
-        <p>Phone: 0442450605</p>
+    <section id="skills" style="display: none;">
+        <h1>Skills</h1>
+        <!-- Add skill charts or lists here -->
     </section>
 
     <footer>
-        <p>&copy; 2023 Elias Niemi</p>
+        <p>Copyright © Your Name. All rights reserved.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.getElementById('projects').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+            document.getElementById('skills').style.display = 'none';
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>

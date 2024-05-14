@@ -1,118 +1,74 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e; /* dark blue background */
+    color: #e0e1dd; /* light grey text for readability */
 }
 
 header {
-    background-color: #333;
-    color: #fff;
     text-align: center;
-    padding: 1em 0;
+    padding: 20px;
+    background-color: #16213e; /* slightly darker blue for the header */
+    color: white;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.profile-img {
+    width: 120px; /* fixed size */
+    height: 120px; /* fixed size */
+    border-radius: 50%; /* makes the image round */
+    border: 3px solid #0f3460; /* dark blue border */
+    object-fit: cover; /* ensures the image covers the space without distortion */
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
+.nav-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white; /* adds a border to the button */
+    padding: 10px 20px;
+    margin: 10px;
+    text-align: center;
     text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #0f3460; /* dark blue highlight */
+    color: #ffffff; /* ensures text is still visible */
+    border-color: #e0e1dd; /* changes border color on hover */
 }
 
 section {
-    margin: 20px;
     padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-}
-
-.project {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.project-image {
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
-}
-
-.project-info h3 {
-    margin: 0;
-}
-
-.project-link {
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    background-color: #1a1a2e; /* maintains consistent background color */
+    border-top: 3px solid #16213e; /* adds a thematic top border */
 }
 
 footer {
     text-align: center;
-    padding: 20px 0;
-    background-color: #333;
+    padding: 10px;
+    background-color: #16213e;
     color: white;
 }
 
-@media (max-width: 600px) {
-    .project {
-        flex-direction: column;
-        align-items: start;
-    }
 
-    .project-image {
-        margin-bottom: 10px;
-    }
-}
-
-.profile-image-container {
+.game-display {
     text-align: center;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
-.profile-image {
-    width: 150px;
-    border-radius: 50%;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+.game-screenshot {
+    width: 100%; /* Adjust as needed */
+    max-width: 640px; /* Adjust as needed */
+    margin: 0 auto 10px;
+    display: block;
 }
 
-.code-container {
-    max-height: 400px;
-    overflow: auto;
-    background-color: #f5f5f5; 
-    border: 1px solid #ddd; 
-    padding: 10px;
-    margin: 20px 0;
-}
-
-.plong-image {
-    width:100%;
-    max-width: 600px;
-    height: auto;
-}
-
-.project-info {
-    
-    padding-left: 40px; 
-}
-
-.gameplay-video {
-    width: 100%;
-    max-width: 800px;
-    height: auto; 
-    display: block; 
-    margin: 0 auto; 
+.game-container {
+    margin-top: 10px;
 }
