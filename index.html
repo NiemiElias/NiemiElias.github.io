@@ -16,33 +16,60 @@
         </nav>
     </header>
     
+    
     <section id="projects" style="display: none;">
         <h1>Projects</h1>
 
         <div class="game-display">
-            <img src="images/the-lost-vessel-screenshot.jpg" alt="Screenshot of The Lost Vessel" class="game-screenshot">
-            <button onclick="loadGame()">Play The Lost Vessel</button>
-            <div class="game-container" id="gameContainer" style="display:none;"></div>
+            <img src="images/TheLostVessel.png" alt="Screenshot of The Lost Vessel" class="game-screenshot">
+            <p>The Lost Vessel is a first person survival horror experience. <br>
+                The main character is a lone member of the coast guard who comes upon an old abandoned ship in the middle of the ocean and sets out to investigate. </p>
+            <a href="https://niemi62.itch.io/the-lost-vessel?secret=YDhA18kZKh2rneGOIJxBMnX2Y" target="_blank"><button class="nav-button">Play The Lost Vessel</button></a>
+            
         </div>
 
         <div class="game-display">
-            <img src="images/plong-screenshot.jpg" alt="Screenshot of Plong" class="game-screenshot">
-            <button onclick="loadPlong()">Play Plong</button>
-            <div class="game-container" id="gameContainerPlong" style="display:none;"></div>
+            <img src="images/plong.png" alt="Screenshot of Plong" class="game-screenshot">
+            <p>Plong is a endless Arkanoid based game made in few days.</p>
+            <a href="https://niemi62.itch.io/plong" target="_blank"><button class="nav-button">Play Plong</button></a>  
         </div>
-
-        <!-- Add your game loading scripts here, similar to previous setup -->
     </section>
 
     <section id="about" style="display: none;">
         <h1>About Me</h1>
-        <h2>I am a game developer who enjoys creating exciting experiences and journeys.</h2>
+        <p>I am a game developer who enjoys creating exciting experiences and journeys.<p>
         <p>I have worked on multiple game projects, from school projects to professional game studio projects.</p>
     </section>
 
     <section id="skills" style="display: none;">
         <h1>Skills</h1>
-        <!-- Add skill charts or lists here -->
+        <div class="skill">
+            <label for="csharp-slider">C#</label>
+            <div class="skill-bar" id="csharp-slider">
+                <div class="skill-progress" style="width: 90%;"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <laber for="python-slider">Python</laber>
+            <div class="skill-bar" id="python-slider">
+                <div class="skill-progress" style="width: 80%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <label for="cpp-slider">C++</label>
+            <div class="skill-bar" id="cpp-slider">
+                <div class="skill-progress" style="width: 70%;"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <label for="javascript-slider">JavaScript</label>
+            <div class="skill-bar" id="javascript-slider">
+                <div class="skill-progress" style="width: 60%;"></div>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -59,6 +86,28 @@
             // Show the selected section
             document.getElementById(sectionId).style.display = 'block';
         }
+    </script>
+
+    <script>
+        function showSection(sectionId) {
+        
+        document.getElementById('projects').style.display = 'none';
+        document.getElementById('about').style.display = 'none';
+        document.getElementById('skills').style.display = 'none';
+
+        // Show the selected section
+        document.getElementById(sectionId).style.display = 'block';
+
+        // Animate skills bars only when showing the 'skills' section
+        if (sectionId === 'skills') {
+            const skills = document.querySelectorAll('.skill-progress');
+            skills.forEach(skill => {
+                const width = skill.style.width;
+                skill.style.width = '0'; // Reset to 0 to animate
+                setTimeout(() => { skill.style.width = width; }, 500);
+            });
+        }
+    }
     </script>
 </body>
 </html>

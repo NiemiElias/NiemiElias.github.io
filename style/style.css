@@ -63,12 +63,38 @@ footer {
 }
 
 .game-screenshot {
-    width: 100%; /* Adjust as needed */
-    max-width: 640px; /* Adjust as needed */
+    width: 100%;
+    max-width: 640px; 
     margin: 0 auto 10px;
     display: block;
 }
 
 .game-container {
     margin-top: 10px;
+}
+
+
+.skill {
+    margin: 20px 0;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 20px;
+    background-color: #3f91df;
+    border-radius: 8px 0 0 8px;
+    width: 0;
+    transition: width 2s ease;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
